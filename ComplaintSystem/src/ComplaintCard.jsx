@@ -1,4 +1,5 @@
-export default function ComplaintCard({ complaintData }) {
+export default function ComplaintCard({ complaintData, deleteComplaint }) {
+   
   return (
     <div className="card">
       <h3>{complaintData.complaint}</h3>
@@ -8,7 +9,7 @@ export default function ComplaintCard({ complaintData }) {
       <div className={`status-badge ${complaintData.status}`}>
         Status: {complaintData.status}
       </div><br></br>
-      <button>Delete Complaint</button> 
+      <button onClick={() => deleteComplaint(complaintData.id)}>Delete Complaint</button> 
     </div>
   );
 }

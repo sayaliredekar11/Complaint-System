@@ -1,6 +1,6 @@
 import ComplaintCard from "./ComplaintCard";
 
-export default function ComplaintList({ complaints }) {
+export default function ComplaintList({ complaints, deleteComplaint }) {
   return (
     <div>
       <h2>All Complaints</h2>
@@ -9,7 +9,7 @@ export default function ComplaintList({ complaints }) {
       ) : (
         <div className="list-container">
           {complaints.map((c) => (
-            <ComplaintCard key={c.id} complaintData={c} />
+            <ComplaintCard key={c.id} complaintData={c} deleteComplaint={deleteComplaint}/>
           ))}
         </div>
       )}
