@@ -9,7 +9,7 @@ export default function ComplaintList({ complaints, deleteComplaint }) {
       ) : (
         <div className="list-container">
           {complaints.map((c) => (
-            <ComplaintCard key={c.id} complaintData={c} deleteComplaint={deleteComplaint}/>
+            <ComplaintCard key={c._id} complaintData={c} deleteComplaint={deleteComplaint}/>
           ))}
         </div>
       )}
